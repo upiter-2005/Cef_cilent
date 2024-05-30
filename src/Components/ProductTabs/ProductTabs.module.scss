@@ -1,0 +1,54 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.product_color_Info{
+    background-color: #D4E9F7;
+    padding: 93px 0 133px;
+    margin-top: 160px;
+    overflow: hidden;
+    @include media-lg{
+        padding: 64px 16px ;
+      }
+    .product_color_InfoBox{
+        display: flex;
+        gap: 60px;
+        @include media-lg{
+            flex-direction: column;
+        }
+        .color_Info_left{
+            flex: 1;
+            h2{
+                text-transform: uppercase;
+                font-size: 64px;
+                font-weight: 700;
+                margin-bottom: 64px;
+                @include media-lg{
+                    font-size: 46px;
+                    margin-bottom: 32px;
+                  }
+            }
+        }
+        .color_Info_right{
+            max-width: 448px;
+            width: 100%;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                width: 700px;
+                height: 503px;
+                border: 1px solid #a6a6a6;
+                position: absolute;
+                top: -30px;
+                left: 53%;
+                z-index: 1;
+            }
+            img{
+                width: 100%;
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+}
+

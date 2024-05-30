@@ -1,0 +1,84 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+.category_page{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    @include media-lg{
+        padding-left: 16px;
+        padding-right: 16px;
+        overflow: hidden;
+      }
+    .category_page_top{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        gap: 51px;
+        @include media-lg{
+            flex-direction: column;
+            gap: 32px;
+          }
+        &::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            display: block;
+            width: 530px;
+            height: 440px;
+            border: 1px solid #C7C7C7;
+            @include media-lg{
+                width: 224px;
+                height: 228px;
+                top: auto;
+                bottom: 20px;
+                right: -30px;
+              }
+        }
+        .left{
+            max-width: 539px;
+            width: 100%;
+            span{
+                display: block;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 23px;
+            }
+            h1{
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 60px;
+                margin-bottom: 64px;
+                margin-top: 32px;
+                text-transform: uppercase;
+                @include media-lg{
+                    font-size: 46px;
+                    line-height: 43px;
+                    margin-bottom: 32px;
+                  }
+            }
+            .catDescription{
+                max-width: 488px;
+                line-height: 25px;
+            }
+        }
+        .right{
+            max-width: 530px;
+            width: 100%;
+            img{
+                width: 100%;
+                position: relative;
+                right: 60px;
+                top: 60px;
+                @include media-lg{
+                    right: 0;
+                    top: 30px;
+                    width: 100%;
+                    height: 236px;
+                    object-fit: cover;
+                  }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+.breadcrumbs{
+  width: 100%;
+   font-size: 16px;
+   font-weight: 300;
+   color: #1e1e1e;
+   display: flex;
+   gap: 23px;
+   margin-bottom: 40px;
+   @include media-lg{
+    font-weight: 400;
+    padding-left: 16px;
+  }
+   a{
+    color: #1e1e1e;
+    position: relative;
+    &:after{
+      content: url(../../assets/img/arr_right.svg);
+      position: absolute;
+      top: 0;
+      right: -14px;
+    }
+   } 
+}

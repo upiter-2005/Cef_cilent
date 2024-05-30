@@ -1,0 +1,43 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.filter_wrap{
+    padding-top: 160px;
+    .filter_title{
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 64px;
+        @include media-lg{
+            font-size: 24px;
+          }
+        span{
+            font-weight: 700;
+            font-size: 64px;
+            @include media-lg{
+                font-size: 46px;
+                display: block;
+              }
+        }
+    }
+    .filter_cat_descr{
+        max-width: 587px;
+        width: 100%;
+      
+    }
+    .filter_cat_box{
+        padding-top: 64px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .filterBtnBox{
+        display: flex;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+          }
+          
+    }
+}

@@ -1,0 +1,109 @@
+.contact__wrapper{
+    display: grid;
+    align-items: center;
+    border: 1px solid #1e1e1e;
+    grid-template-columns: 1fr 1fr;
+    .contact__wrapper_left{
+        max-width: 592px;
+        width: 100%;
+        padding: 90px;
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 38px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .contact__stripe{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .contact__stripe_Item{
+                margin-bottom: 40px;
+                width: 100%;
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                a{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+             
+            }
+            .contact__stripe_Item50{
+                width: 50%;
+                margin-bottom: 40px;
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                }
+                a{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+            }
+            .contact__stripe_Soc{
+                p{
+                    font-size: 14px;
+                    line-height: 22px;
+                    margin-bottom: 12px;
+                }
+                a{
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+                .contact__soc{
+                    display: flex;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+    .contact__wrapper_right{
+        background-color: #1e1e1e;
+        height: 100%;
+        flex: 1;
+        color: #fff;
+        padding: 90px ;
+        h2{
+           text-transform: uppercase;
+           font-size: 40px;
+           font-weight: 700; 
+           margin-bottom: 23px;
+        }
+        form{
+            p{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+            .form_row {
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+            .checkbox{
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin: 40px 0;
+                .checkbox__squre{
+                    background-color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                    margin-right: 12px;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,50 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.selectBox{
+    max-width: 380px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 24px;
+    .cefSelect{
+        width: 100%;
+        
+        input{
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #1e1e1e;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+        .selectItems{
+            background-color: #fff;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            border: 1px solid #EAEAEA;
+            padding: 0;
+            margin-bottom: 26px;
+            max-height: 164px;
+            overflow: auto;
+            z-index: 50;
+            .selectItems_el{
+                line-height: 25px;
+                padding: 5px 13px;
+                &:hover{
+                    background-color: #eee;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}
+.np-department-select{
+    margin-top: 26px;
+    .react-select__control{
+        border: none;
+        border-bottom: 1px solid #1e1e1e;
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,154 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+    @include media-lg{
+        padding: 40px 16px;
+        flex-direction: column;
+    }
+    .footer_logo{
+        @include media-lg{
+            width: 67px;
+            margin-bottom: 16px;
+        }
+    }
+    .col{
+        width: 25%;
+        @include media-lg{
+            width: 100%;
+        }
+    }
+    .col_f_1{
+        order: 1;
+        @include media-lg{
+            order: 1;
+        }
+    }
+    .col_f_2{
+        order: 2;
+        @include media-lg{
+            order: 4;
+        }
+    }
+    .col_f_3{
+        order: 3;
+        @include media-lg{
+            order: 3;
+            border-top: 1px solid #c7c7c7;
+            padding-top: 32px;
+        }
+    }
+    .col_f_4{
+        order: 4;
+        @include media-lg{
+            order: 2;
+        }
+    }
+
+    .copyright{
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 153px;
+        margin-top: 109px;
+        @include media-lg{
+            display: none;
+        }
+    }
+    .copyrightMob{
+        display: none;
+        @include media-lg{
+            display: block;
+            font-size: 12px;
+            line-height: 14px;
+            margin-top: 12px;
+        }
+    }
+    .footer_capture{
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        color: #1e1e1e;
+        text-transform: uppercase;
+    }
+    ul{
+        margin-bottom: 48px;
+        li{
+            margin-bottom: 15px;
+            a{
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 16px;
+                color: #1e1e1e;
+                margin-bottom: 15px; 
+                span{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .footer_form{
+        width: 100%;
+        position: relative;
+        span{
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            background-color: #fff;
+            font-size: 14px;
+            padding: 0 8px;
+        }
+        input{
+            width: 100%;
+            border: 1px solid #D9D9D9;
+            padding: 15px 12px 11px; 
+            font-size: 16px;
+            font-weight: 300;
+            
+        }
+        button[type="submit"]{
+            // transform: skew(10deg, 10deg);
+            // background-color: pink;
+            background-image: url('../../assets/img/Rectangle.svg');
+            background-position: center;
+            background-size: cover;
+            display: block;
+            width: 54px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+    .footer_descr{
+        font-size: 14px;
+        line-height: 22px;
+        margin: 16px 0 33px;
+    }
+    .socs{
+        display: flex;
+        gap: 20px;
+        @include media-lg{
+            display: none;
+        }
+    }
+    .socsMob{
+        display: none;
+        @include media-lg{
+            display: flex;
+            gap: 20px;
+            padding-top: 32px;
+            border-top: 1px solid #c7c7c7;
+        }
+    }
+} 

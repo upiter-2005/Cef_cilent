@@ -1,0 +1,24 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.filterBtn{
+    font-size: 20px;
+    color: #1e1e1e;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    cursor: pointer;
+    padding-bottom: 5px;
+    margin-right: 54px;
+    white-space: nowrap;
+    @include media-lg{
+        font-size: 16px;
+        margin-right: 32px;
+      }
+    &.activeFilter{
+        border-bottom: 2px solid #1e1e1e;
+    }
+}

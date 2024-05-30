@@ -1,0 +1,29 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+.orderHistory{
+    width: 100%;
+    .orderHistory_title{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #d9d9d9;
+       
+        
+    }
+    .orderHistory_flex{
+        display: flex;
+        padding: 16px 20px;
+        @include media-lg{
+            display: none;
+        }
+        span{
+            display: block;
+            width: 25%;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    
+}

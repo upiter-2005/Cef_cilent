@@ -1,0 +1,293 @@
+@import './assets/css/variables.scss' ;
+@import './assets/css/mixins.scss' ;
+
+.App{
+  font-family: "Roboto Condensed", sans-serif;
+}
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.qtyBox{
+  border: 1px solid #1e1e1e;
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 20px;
+  @include media-lg{
+    display: block;
+    padding: 16px 20px;
+  }
+  
+  button{
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    @include media-lg{
+      padding: 0 14px;
+    }
+  }
+}
+.qtyBoxMin{
+  border: 1px solid #1e1e1e;
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 19px;
+  
+  button{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+}
+.blackBtn{
+  background-color: #1e1e1e;
+  padding: 16px 68px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #1e1e1e;
+  cursor: pointer;
+  text-align: center;
+  transition: all .3s ease;
+  @include media-lg{
+    display: block;
+    padding: 16px;
+    width: 100%;
+  }
+  &:hover{
+    color: #1e1e1e;
+    background-color: #fff;
+    
+  }
+  &.full{
+    width: 100%!important;
+  }
+}
+.inverseBtn{
+  text-align: center;
+  background-color: #fff;
+  padding: 16px 68px;
+  color: #1e1e1e;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #1e1e1e;
+  cursor: pointer;
+  &:hover{
+    opacity: .7;
+  }
+  &.full{
+    width: 100%!important;
+  }
+}
+.registerBtn{
+  background-color: #fff;
+  padding: 16px 40px;
+  display: block;
+  white-space: nowrap;
+  color: #1e1e1e;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 1px solid #1e1e1e;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    opacity: .7;
+  }
+}
+.addToCart{
+  display: inline-block;
+}
+
+.error_message{
+  font-size: 12px;
+  font-weight: 300;
+  color: #EB001B;
+  margin-top: 8px;
+}
+
+/* PRODUCT TABS STYLES */
+.react-tabs__tab-list{
+  display: flex;
+  gap: 54px;
+  margin-bottom: 40px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @include media-lg{
+    overflow-x: scroll;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+  li{
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding-bottom: 6px;
+    white-space: nowrap;
+    @include media-lg{
+      font-size: 16px;
+    }
+  }
+  .react-tabs__tab--selected{
+    border-bottom: 2px solid #000;
+    font-weight: 700;
+  }
+}
+.tabContent{
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 100%;
+  width: 100%;
+}
+/* PRODUCT TABS STYLES */
+
+
+/* .filter_cat_descr{
+  max-width: 300px;
+} */
+
+
+.inputCEF{
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+  .errorInputCEF{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+     font-weight: 300;
+     color: #EB001B;    
+  }
+  span{
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background-color: #fff;
+      font-size: 14px;
+      padding: 0 8px;
+  } 
+  input{
+      width: 100%;
+      border: 1px solid #D9D9D9;
+      padding: 15px 12px 11px; 
+      font-size: 16px;
+      font-weight: 300;
+  }
+}
+
+.inputCEFBlack{
+  width: 100%;
+  position: relative;
+  max-width: 180px;
+  .errorInputCEF{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+     font-weight: 300;
+     color: #EB001B;    
+  }
+  @include media-lg{
+    max-width: 100%;
+}
+  span{
+      position: absolute;
+      top: -8px;
+      left: 10px;
+      background-color: #1e1e1e;
+      font-size: 14px;
+      padding: 0 8px;
+      color: #fff;
+  } 
+  input{
+      width: 100%;
+      border: 1px solid #D9D9D9;
+      padding: 15px 12px 11px; 
+      font-size: 16px;
+      font-weight: 300;
+      color: #fff;
+      background-color: transparent;
+  }
+}
+
+footer{
+  margin-top: 150px;
+  width: 100%;
+  border-top: 1px solid #C7C7C7;
+  @include media-lg{
+    margin-top: 64px;
+  }
+}
+
+
+.home_Slider_wrapper{
+  position: relative;
+  .count{
+    position: absolute;
+    bottom: -96px;
+    right: 88px;
+    font-size: 26px;
+    line-height: 41px;
+    color: #8F8F8F;
+    @include media-lg{
+      bottom: 4px;
+     }
+    span{
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 54px;
+      color: #1e1e1e;
+    }
+  }
+}
+.mobMnu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translate(-100%,0);
+  z-index: 9999;
+  background-color: #1e1e1e;
+  padding: 64px 24px;
+  transition: all .6s ease;
+  &.mobMnuOpen{
+    transform: translate(0,0)!important;
+  }
+  .mobMnu_close{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    filter: invert(1);
+  }
+  img{
+    margin-bottom: 34px;
+  }
+  a{
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 0;
+    display: block;
+  }
+}
+
+.Toastify__toast--info{
+  background-color: #343434!important;
+  color: #fff!important;
+  border: 1px solid #ddd;
+}
+.Toastify__progress-bar {
+  background-color: #fff!important;
+}

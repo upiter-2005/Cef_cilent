@@ -1,0 +1,62 @@
+@mixin media-md{
+    @media(max-width: $md){
+        @content;
+    }
+}
+@mixin media-lg{
+    @media(max-width: $lg){
+        @content;
+    }
+}
+
+@mixin black-btn{
+    background-color: #1e1e1e;
+    padding: 16px 68px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid #1e1e1e;
+    cursor: pointer;
+    transition: all .3s ease;
+    &:hover{
+        color: #1e1e1e;
+        background-color: #fff;
+    }
+}
+@mixin inverse-btn{
+background-color: #fff;
+padding: 16px 68px;
+color: #1e1e1e;
+font-weight: 500;
+font-size: 20px;
+text-transform: uppercase;
+border: 1px solid #1e1e1e;
+transition: all .3s ease;
+cursor: pointer;
+    &:hover{
+        color: #fff;
+        background-color: #1e1e1e;
+    }
+}
+@mixin registerBtn{
+    background-color: #fff;
+    padding: 16px 40px;
+    display: block;
+    white-space: nowrap;
+    color: #1e1e1e;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid #1e1e1e;
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+    }
+}
+
+
+@mixin flex-justify-between{
+    display: flex;
+    justify-content: space-between;
+}

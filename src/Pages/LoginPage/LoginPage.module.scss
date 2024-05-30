@@ -1,0 +1,101 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.login__wrapper{
+    display: grid;
+    align-items: center;
+    border: 1px solid #1e1e1e;
+    grid-template-columns: 1fr 1fr;
+     @include media-lg{
+        display: block;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .login__wrapper_left{
+        max-width: 490px;
+        width: 100%;
+        padding: 90px;
+        @include media-lg{
+            padding: 60px 24px;
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 38px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .login__servBox{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .formLink{
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        .checkbox{
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            font-weight: 300;
+            .checkbox__squre{
+                background-color: #1e1e1e;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                margin-right: 12px;
+            }
+        }
+        button[type='submit']{
+            width: 100%;
+        }
+        .noAccount{
+            margin-top: 16px;
+            font-weight: 300;
+            .noAccount__link{
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+    .login__wrapper_right{
+        background-color: #1e1e1e;
+        height: 100%;
+        flex: 1;
+        color: #fff;
+        padding: 90px ;
+        @include media-lg{
+            padding: 60px 24px;
+        }
+        .login__right_inner{
+            max-width: 334px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 32px;
+            h2{
+                text-transform: uppercase;
+                font-size: 40px;
+                font-weight: 700; 
+                margin-bottom: 23px;
+                @include media-lg{
+                    font-size: 32px;
+                }
+             }
+             a{
+                padding: 16px;
+             }
+        }
+        
+       
+        
+    }
+}

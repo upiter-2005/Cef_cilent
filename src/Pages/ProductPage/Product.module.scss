@@ -1,0 +1,255 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.product_wrapper{
+    display: flex;
+    justify-content:  space-between;
+    flex-wrap: wrap;
+    color: #1e1e1e;
+    @include media-lg{
+        padding-left: 16px;
+        padding-right: 16px;
+        flex-direction: column;
+      }
+    .left{
+      max-width: 643px;
+      width: 100%;  
+      .mob_title{
+        font-size: 40px;
+        font-weight: 700;
+        display: none;
+        text-transform: uppercase;
+        @include media-lg{
+            display: block;
+          }
+      }
+      .gallery_desktop{
+        display: block;
+        position: relative;
+        .label{
+            position: absolute;
+            top: 28px;
+            right: 0;
+            z-index: 10;
+        }
+        @include media-lg{
+            display:none;
+          }
+      }
+      .gallery_mob{
+        display: none;
+        position: relative;   
+        .label{
+            position: absolute;
+            top: 28px;
+            right: 0;
+            z-index: 10;
+        }  
+        @include media-lg{
+            display: block;
+          }
+      }
+    }
+    .right{
+       max-width: 488px;
+       width: 100%;
+       h1{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 38px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            @include media-lg{
+                display: none;
+              }
+       } 
+       .steps_product_wrap{
+        width: 100%;
+        margin-bottom: 64px;
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        @include media-lg{
+            flex-wrap: wrap;
+          }
+        .consist{
+            font-weight: 700;
+        }
+        .steps_product{
+            width: 100%;
+            .steps_Item__title{
+                flex: 1;
+                display: flex;
+                justify-content: space-between;
+                white-space: nowrap;
+                .art{
+                    white-space: nowrap;
+                    margin-left: 56px;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+       }
+       .product_description{
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        margin-bottom: 32px;
+       }
+       .product_props{
+            border-top: 1px solid #D9D9D9;
+            border-bottom: 1px solid #D9D9D9;
+            padding: 32px 0;
+            display:  flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 32px;
+            .product_props_Item{
+                span{
+                    font-size: 14px;
+                    &:first-child{
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding-right: 6px;
+                    }
+                }
+             
+            }
+       }
+       .sku_capacity{
+        display: flex;
+        gap: 47px;
+        margin-bottom: 24px;
+        &_Item{
+            span{
+                font-size: 14px;
+                &:first-child{
+                    font-weight: 700;
+                }
+            }
+        }
+       }
+       .product_price{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 64px;
+        @include media-lg{
+            margin-bottom: 32px;
+            }
+        }
+       .product_action_block{
+        display: flex;
+        gap: 4px;
+        button{
+            @include media-lg{
+                flex: 1;
+            }
+        }
+       }
+       .product_infoMessage{
+            text-transform: uppercase;
+            font-size: 16px;
+            color: #000;
+            line-height: 18px;
+            margin-top: 12px;
+       }
+    }
+    
+}
+.relative_title{
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    font-size: 64px;
+    font-weight: 700;
+    padding-top: 160px;
+    @include media-lg{
+        font-size: 46px;
+        padding-top: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 32px;
+        overflow: hidden;
+      }
+} 
+.steps{
+    width: 100%;
+    padding: 160px 0;
+    h2{
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 64px;
+    }
+    .steps_Item{
+        width: 100%;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+        @include media-lg{
+            max-width: 343px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .steps_Item_container{
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            @include media-lg{
+                flex-direction: column;
+            }
+            .steps_Item__img{
+                width: 350px;
+                height: 350px;
+                display: block;
+                object-fit: cover;
+                border: 1px solid #eaeaea;
+                margin: 51px 0;
+            }
+            .steps_Item__data{
+                max-width: 620px;
+                border-left: 1px solid #eaeaea;
+                flex: 1;
+                padding: 51px 0 51px 42px;
+                @include media-lg{
+                    padding: 32px 0;
+                    border-left: 0;
+                    padding-top: 0;
+                }
+                .steps_Item__title{
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 30px;
+                    margin-bottom: 24px;
+                    text-transform: uppercase;
+                }
+                .steps_Item__descr{
+                    display: block;
+                    font-weight: 300;
+                    line-height: 25px;
+                    margin-bottom: 12px;
+                    span{
+                        font-weight: 700;
+                    }
+                }
+                .steps_props{
+                    margin-top: 40px;
+                    display: flex;
+                    .steps_props_Item{
+                        margin-right: 68px;
+                        span:first-child{
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}

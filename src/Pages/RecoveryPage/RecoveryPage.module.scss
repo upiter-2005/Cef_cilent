@@ -1,0 +1,75 @@
+@import '../../assets/css/variables.scss' ;
+@import '../../assets/css/mixins.scss' ;
+
+.recovery__wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        right: -250px;
+        top: 0;
+        display: block;
+        border: 1px solid #A6A6A6;
+        width: 640px;
+        height: 516px;
+        z-index: 1;
+        @include media-lg{
+            border: none;
+        }
+    }
+    .recovery__wrapper_left{
+        max-width: 530px;
+        width: 100%;
+        @include media-lg{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        
+        h1{
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 60px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            @include media-lg{
+                font-size: 46px;
+                padding-right: 80px;
+            }
+        }
+        form{
+            max-width: 426px;
+        }
+        .recovery__servBox{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .formLink{
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        
+        button[type='submit']{
+            width: 100%;
+        }
+        
+        
+    }
+    .recovery__wrapper_right{
+        @include media-lg{
+            display: none;
+        }
+        img{
+            position: relative;
+            z-index: 2;
+            top: 81px;
+            right: 250px;
+        }
+        
+       
+        
+    }
+}
