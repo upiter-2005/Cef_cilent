@@ -85,7 +85,14 @@ const LoginPage:React.FC = () => {
           
         } )
         .catch( (err: any) => {
-          console.log('error login');
+          console.log(err.response.data.code);
+          if(err.response.data.code === '[jwt_auth] invalid_email'){
+            console.log("invalid_email")
+            toast.warning("Такий email не зареєстрований");
+          }
+          if(err.response.data.code === '[jwt_auth] incorrect_password'){
+            toast.warning("Невірний пароль");
+          }
            
         } 
     )

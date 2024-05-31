@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                         </div>
                     </li>
                     <li className={classes.parent_mnu}>
-                        <a href="/comunity">СEF комьюніті</a>
+                        <Link to="/comunity">СEF комьюніті</Link>
 
                         {/* <div className={classes.child_mnu}>
                             <div className={classes.child_mnu_wrapper}>

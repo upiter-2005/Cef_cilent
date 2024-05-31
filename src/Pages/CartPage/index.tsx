@@ -20,7 +20,7 @@ const CartPage:React.FC = () => {
     <>
 
         <Helmet>
-          <link rel="canonical" href={`https://sicvolo.com${window.location.pathname}`} />
+          <link rel="canonical" href={`https://apicef.space${window.location.pathname}`} />
             <title>CEF LAB - Кошик</title> 
             <meta name="description" content="CEF LAB - Кошик" />
             <meta property="og:title" content="CEF LAB - Кошик" data-react-helmet="true" />

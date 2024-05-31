@@ -82,7 +82,7 @@ console.log(seoDescr);
   return (
     <>
     <Helmet>
-          <link rel="canonical" href={`https://sicvolo.com${window.location.pathname}`} />
+          <link rel="canonical" href={`https://apicef.space${window.location.pathname}`} />
             <title>{seoTitle}</title> 
             <meta name="description" content={seoDescr} />
             <meta property="og:title" content={seoTitle} data-react-helmet="true" />

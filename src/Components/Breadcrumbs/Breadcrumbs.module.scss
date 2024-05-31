@@ -23,3 +23,13 @@
     }
    } 
 }
+.breadcrumbsWhite{
+  color: #fff!important;
+  a{
+    color: #fff!important;
+    &:after{
+      content: url(../../assets/img/arrow-right_w.svg)!important;
+  
+    }
+  }
+}

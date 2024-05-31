@@ -6,10 +6,11 @@ type BreadcrumbsProps = {
   first_link: string,
   first_link_name?: string,
   second_link_name?: string,
+  isWhite?: boolean
 }
-const Breadcrumbs:React.FC<BreadcrumbsProps> = ({first_link, first_link_name, second_link_name}) => {
+const Breadcrumbs:React.FC<BreadcrumbsProps> = ({first_link, first_link_name, second_link_name, isWhite}) => {
   return (
-    <div className={classes.breadcrumbs}>
+    <div className={isWhite ? `${classes.breadcrumbs} ${classes.breadcrumbsWhite}` : `${classes.breadcrumbs}` }>
       
       {second_link_name ? 
       (<>

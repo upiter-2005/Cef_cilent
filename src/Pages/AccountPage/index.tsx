@@ -28,7 +28,7 @@ const AccountPage:React.FC = () => {
     return (
         <>
         <Helmet>
-          <link rel="canonical" href={`https://sicvolo.com${window.location.pathname}`} />
+          <link rel="canonical" href={`https://apicef.space${window.location.pathname}`} />
             <title>CEF LAB - Обліковий кабінет</title> 
             <meta name="description" content="CEF LAB - Обліковий кабінет" />
             <meta property="og:title" content="CEF LAB - Обліковий кабінет" data-react-helmet="true" />

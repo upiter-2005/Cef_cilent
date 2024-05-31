@@ -127,7 +127,7 @@ console.log(delivery);
   return (
     <>
     <Helmet>
-          <link rel="canonical" href={`https://sicvolo.com${window.location.pathname}`} />
+          <link rel="canonical" href={`https://apicef.space${window.location.pathname}`} />
             <title>CEF LAB - оформити замовлення</title> 
             <meta name="description" content="CEF LAB - оформити замовлення" />
             <meta property="og:title" content="CEF LAB - оформити замовлення" data-react-helmet="true" />

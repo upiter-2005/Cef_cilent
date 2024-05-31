@@ -37,8 +37,8 @@ const exit = () => {
       <div className={classes.modal__content} onClick={(e)=> e.stopPropagation()}>
      
         <img src={closeIco} className={classes.closeModal} onClick={closeModal} 
-          alt="Sicvolo - close icon"
-          title="Sicvolo - close icon"  
+          alt="cef - close icon"
+          title="cef - close icon"  
          />
 
 

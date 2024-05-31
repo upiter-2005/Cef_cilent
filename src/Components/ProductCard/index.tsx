@@ -39,7 +39,7 @@ const ProductCard:React.FC<ProductCardProps> = ({id, sku, slug, name, img, descr
     const ml_value:any = meta?.find(obj => obj.key === 'obm')
     const short_value:any = meta?.find(obj => obj.key === 'osnovni_ingridinti')
     const product_type:any = meta?.find(obj => obj.key === 'tip_tovaru')
-    console.log(product_type);
+   
     setMl(ml_value?.value)
     setShort(short_value?.value)
   
@@ -59,7 +59,7 @@ const ProductCard:React.FC<ProductCardProps> = ({id, sku, slug, name, img, descr
       dispatch(openQuick())
   }
   
-console.log(type);
+
   return (
     <>
     <div className={classes.productCard}>

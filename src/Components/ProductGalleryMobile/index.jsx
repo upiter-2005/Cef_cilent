@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/scss/image-gallery.scss"
@@ -16,15 +17,16 @@ import "react-image-gallery/styles/scss/image-gallery.scss"
 //       thumbnail: '/img/ln1.jpg',
 //     },
 //   ];
-//  function VideoItem({video}){
-//   return (
-//    <video src={video} width="100%" height="100%" controls autoPlay></video>
-//   )
-// }
-export default function ProductGalleryMobile({productImgs}) {
+ function VideoItem({video}){
+  return (
+   <video src={video} width="100%" height="100%" controls autoPlay></video>
+  )
+}
+export default function ProductGalleryMobile({productImgs, video, poster}) {
 
     const [imgs, setImgs] = useState([])
-
+    console.log(video);
+    console.log(poster);
     useEffect(()=> {
        console.log(productImgs);
         const imgObj = productImgs.map((obj)=>{
@@ -35,18 +37,18 @@ export default function ProductGalleryMobile({productImgs}) {
             })
             setImgs(imgObj)
 
-            // eslint-disable-next-line no-lone-blocks
-            // {video ? (setImgs([...imgObj, {
-            //   original: "",
-            //   thumbnail: poster ,
-            //   //renderItem: () => {<video src={video} width="100%" height="100%" controls autoPlay></video>},
-            //   renderItem: () => <VideoItem video={video} />,
-            //  // renderThumbInner: () => <VideoItem />,
-            //  }])) : (setImgs(imgObj)) }
+            
+            {video ? (setImgs([...imgObj, {
+              original: "",
+              thumbnail: poster ,
+              //renderItem: () => {<video src={video} width="100%" height="100%" controls autoPlay></video>},
+              renderItem: () => <VideoItem video={video} />,
+             // renderThumbInner: () => <VideoItem />,
+             }])) : (setImgs(imgObj)) }
 
             
 
-    }, [])
+    }, [productImgs, video, poster])
   return (
     <>
     <ImageGallery 

@@ -18,7 +18,6 @@ import {closeQuick, selectUser} from '../../redux/slices/userSlice'
 import {allCategories} from '../../util/categories'
 import label_set from '../../assets/img/label_set.png'
 import label_acz from '../../assets/img/label_acz.png'
- //type StepType = {id?: number, key?: string, value?: string}
 
  type NewStepType = {
     img: string,
@@ -27,7 +26,6 @@ import label_acz from '../../assets/img/label_acz.png'
     text_2: string,
     obm: string,
     artikul: string
-     
 }
 
 const Product:React. FC = () => {
@@ -43,6 +41,8 @@ const Product:React. FC = () => {
     const [productId, setProductId] = useState<number>(0)
     const [name, setName] = useState<string>('')
     const [images, setImages] = useState()
+    const [videoSrc, setVideoSrc] = useState()
+    const [poster, setPoster] = useState()
     const [topDesriotion, setTopDesriotion] = useState<string>('')
     const [cat, setCat] = useState<string>('')
     const [tipCat, setTipCat] = useState<string>('')
@@ -109,7 +109,7 @@ const Product:React. FC = () => {
     }
 
     const settingProduct = (el: any) =>{
-        console.log(countItem);
+        
         //setQty(countItem)
         setProductId(el.id);
         setName(el.name);
@@ -138,6 +138,14 @@ const Product:React. FC = () => {
         const rezultat_dlya_setiv:any = el.meta_data?.find((obj: any) => obj.key === 'rezultat_dlya_setiv')
         const protokol_proczeduri:any = el.meta_data?.find((obj: any) => obj.key === 'protokol_proczeduri')
         const kontent_zobrazhennya:any = el.meta_data?.find((obj: any) => obj.key === 'kontent_zobrazhennya')
+      
+        const video:any =  el?.meta_data?.find((obj: any) => obj.key === "video_file_link");
+        const poster:any  =  el?.meta_data?.find((obj: any) => obj.key === "poster_image_url");
+        console.log(video);
+        console.log(poster);
+    
+        setPoster(poster?.value);
+        setVideoSrc(video?.value);
 
         setContentImg(kontent_zobrazhennya?.value)
         setProductType(tip_tovaru?.value)
@@ -159,6 +167,7 @@ const Product:React. FC = () => {
             if(found_result) {
                 settingProduct(found_result)
                 setProduct(found_result)
+                console.log(found_result);
             }       
         } else{
             dispatch(fetchProducts());
@@ -198,11 +207,11 @@ const Product:React. FC = () => {
         useEffect(()=>{
             console.log(steps);
         },[steps])
-   console.log(product);
+
   return (
     <>
      <Helmet> 
-            <link rel="canonical" href={`sicvolo.com${window.location.pathname}`} />
+            <link rel="canonical" href={`apicef.space${window.location.pathname}`} />
             <title>{`${product?.yoast_head_json?.title} `}</title>
             <meta name='description' content={product?.yoast_head_json?.og_description} />
         </Helmet>
@@ -220,12 +229,12 @@ const Product:React. FC = () => {
             <div className={classes.gallery_mob}> 
                 {productType === 'set' && (<img src={label_set} alt="" className={classes.label} />)}
                 
-                {images && <ProductGalleryMobile productImgs={images} />}
+                {images && <ProductGalleryMobile productImgs={images} video={videoSrc} poster={poster} />}
             </div>
             <div className={classes.gallery_desktop}>
                 {productType === 'set' && (<img src={label_set} alt="" className={classes.label} />)}
                 {/* <img src={label_acz} alt="" className={classes.label} /> */}
-                {images && <ProductGallery productImgs={images} />}
+                {images && <ProductGallery productImgs={images} video={videoSrc} poster={poster} />}
             </div>
             
         </div>
